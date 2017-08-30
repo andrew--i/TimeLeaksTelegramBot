@@ -28,7 +28,7 @@ function all () {
 }
 
 function save(item) {
-    dbx.filesUpload({ contents: JSON.stringify(item), path: '/' + new Date().toISOString().split('T')[0]})
+    dbx.filesUpload({ contents: JSON.stringify(item), path: '/' + new Date().toISOString().split('T')[0] + '/'+guid()+'.json'})
     .then(function(response) {
         console.log(response);
     }).catch(function(error) {
